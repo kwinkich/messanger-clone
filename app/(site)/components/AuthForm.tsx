@@ -66,10 +66,30 @@ const AuthForm = () => {
 					onSubmit={handleSubmit(onSubmit)}
 				>
 					{variatn === 'REGISTER' && (
-						<Input id='name' label='Name' register={register} errors={errors}/>
+						<Input 
+							id='name' 
+							label='Name' 
+							register={register} 
+							errors={errors} 
+							disabled={isLoaing}
+						/>
 					)}
-					<Input id='email' label='Email address' type='email' register={register} errors={errors}/>
-					<Input id='password' label='Password' type='password' register={register} errors={errors}/>
+					<Input 
+						id='email' 
+						label='Email address' 
+						type='email' 
+						register={register} 
+						errors={errors}
+						disabled={isLoaing}
+					/>
+					<Input 
+						id='password' 
+						label='Password' 
+						type='password' 
+						register={register} 
+						errors={errors}
+						disabled={isLoaing}
+					/>
 					<div>
 						<Button disabled={isLoaing} fullWidth type="submit">{variatn === 'LOGIN' ? 'Sign in' : 'Register'}</Button>
 					</div>
