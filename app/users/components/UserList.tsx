@@ -11,7 +11,7 @@ const UserList: React.FC<UserListProps> = ({
     items
 }) => {
     return(
-         <aside
+        <aside
             className="
                 fixed 
                 inset-y-0
@@ -47,7 +47,7 @@ const UserList: React.FC<UserListProps> = ({
                     />
                 ))}
             </div>
-         </aside> 
+        </aside> 
     )
 }
 
