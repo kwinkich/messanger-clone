@@ -11,14 +11,14 @@ import path from "path";
 
 const useRoutes = () => {
 	const pathname = usePathname();
-	const { convesationId } = useConvesation();
+	const { conversationId } = useConvesation();
 
 	const routes = useMemo(() => [
 			{
 				label: 'Chat',
 				href: '/conversations',
 				icon: HiChat,
-				active: pathname === '/conversations' || !!convesationId
+				active: pathname === '/conversations' || !!conversationId
 			},
 			{
 				label: 'Usets',
@@ -32,7 +32,7 @@ const useRoutes = () => {
 				onClick: () => signOut(),
 				icon: HiArrowLeftOnRectangle
 			}
-	], [pathname, convesationId]);
+	], [pathname, conversationId]);
 	return routes;
 }
 
